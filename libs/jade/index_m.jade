@@ -7,7 +7,7 @@ html
 	script.
 		var phoneWidth = parseInt(window.screen.width)
 		var phoneScale = phoneWidth / 640
-		document.write('<meta name="viewport" content="width=750, initial-scale=' + phoneScale + ',minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">')
+		document.write('<meta name="viewport" content="width=640, initial-scale=' + phoneScale + ',minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">')
 body
 each js in js_src
 	script(type="text/javascript" src=js)
