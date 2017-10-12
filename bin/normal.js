@@ -1,11 +1,5 @@
-/**
- * Created by marys on 2017/9/29.
- * 目录结构：
- * |----css
- * |----js
- * |----images
- * |----index.html
- */
+#!/usr/bin/env node
+
 let fs = require('fs');
 let path = require('path');
 let jade = require('jade');
@@ -26,10 +20,10 @@ let normal = (type, globalpath) => {
             dirsJson = require('../libs/dir_conf/normal_m.json');
             break;
     }
-    createDir(type,dirsJson);
+    createDir(type, dirsJson);
 }
 
-let createDir = (type,create_dir) => {
+let createDir = (type, create_dir) => {
     let parent_dir = root_dir;
     if (!create_dir.SubDir || !create_dir.SubDir.length) return false;
     let count = 0;
@@ -68,23 +62,23 @@ let copyeFile = (filedir, files) => {
         writable;
     for (let i = 0; i < files.length; i++) {
         dir_path = filedir + '\\' + files[i];
-        if (!fs.existsSync('./libs/plgs/' + files[i])) continue;
+        if (!fs.existsSync(path.join(__dirname, '../libs/plgs/') + files[i])) continue;
         let file_ex = path.extname(dir_path).replace('.', '');
         index_opt[file_ex].push(dir_path.replace(root_dir, '.').split('\\').join('/'))
-        readable = fs.createReadStream('./libs/plgs/' + files[i]);
+        readable = fs.createReadStream(path.join(__dirname, '../libs/plgs/') + files[i]);
         writable = fs.createWriteStream(dir_path);
         readable.pipe(writable);
     }
 }
 
-let createIndexHtml = (mode,link) => {
+let createIndexHtml = (mode, link) => {
     let mode_dir = '';
-    switch (mode){
+    switch (mode) {
         case 'pc':
-            mode_dir = './libs/jade/index_pc.jade';
+            mode_dir = path.join(__dirname, '../libs/jade/index_pc.jade');
             break;
         case 'mobile':
-            mode_dir = './libs/jade/index_m.jade';
+            mode_dir = path.join(__dirname, '../libs/jade/index_m.jade');
             break;
     }
     let html = jade.renderFile(mode_dir, {
@@ -93,9 +87,7 @@ let createIndexHtml = (mode,link) => {
         css_link: index_opt['css'],
         js_src: index_opt['js']
     })
-    console.log(html)
-    var html_file = fs.writeFile('./index.html',html)
+    var html_file = fs.writeFile('./index.html', html)
 }
 
 module.exports = normal;
-

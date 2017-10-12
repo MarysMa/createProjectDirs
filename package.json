@@ -1,8 +1,19 @@
 {
-  "name": "createdir",
-  "version": "1.0.0",
+  "name": "create-project-dirs",
+  "version": "1.0.1",
   "description": "create dirs of project",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MarysMa/createProjectDirs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MarysMa/createProjectDirs/issues"
+  },
+  "keywords": [
+    "dir",
+    "commonder"
+  ],
   "bin": {
     "create": "bin/create.js"
   },
