@@ -1,0 +1,26 @@
+{
+  "SubDir": [
+    {
+      "Name": "css",
+      "Files": [
+        "index.css"
+      ],
+      "SubDir": [ ]
+    },
+    {
+      "Name": "js",
+      "Files": [
+        "index.js"
+      ],
+      "Plgs": [
+        "jquery-1.10.1.min.js"
+      ],
+      "SubDir": [ ]
+    },
+    {
+      "Name": "images",
+      "Files": [ ],
+      "SubDir": [ ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+doctype
+html
+	meta(content="text/html; charset=UTF-8")
+	title
+	each css in css_link
+		link(rel="stylesheet" type="text/css" href=css)
+body
+each js in js_src
+	script(type="text/javascript" src=js)

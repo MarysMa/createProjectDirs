@@ -1,0 +1,36 @@
+{
+  "Files": [
+    "index.html"
+  ],
+  "SubDir": [
+    {
+      "Name": "css",
+      "Files": [
+        "index.css"
+      ],
+      "Plgs": [
+        "animate.css",
+        "swiper-3.4.1.min.css"
+      ],
+      "SubDir": [ ]
+    },
+    {
+      "Name": "js",
+      "Files": [
+        "index.js"
+      ],
+      "Plgs": [
+        "jquery-1.10.1.min.js",
+        "hdjsH5.min.js",
+        "share.js",
+        "swiper-3.4.1.min.js"
+      ],
+      "SubDir": [ ]
+    },
+    {
+      "Name": "images",
+      "Files": [ ],
+      "SubDir": [ ]
+    }
+  ]
+}

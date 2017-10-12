@@ -1,0 +1,19 @@
+{
+  "name": "createdir",
+  "version": "1.0.0",
+  "description": "create dirs of project",
+  "main": "index.js",
+  "bin": {
+    "create": "bin/create.js"
+  },
+  "dependencies": {
+    "commander": "^2.11.0",
+    "jade": "^1.11.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "marys",
+  "license": "ISC"
+}
