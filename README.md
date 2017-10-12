@@ -3,19 +3,19 @@ quickly to create dirs for normal project
 
 
 
-##Installation
+## Installation
 
 ```javascript
 		$	npm i create-project-dirs -g
 
-##How To Use
+## How To Use
 
 Enter your project dir and execute the cmd:
 
 ```javascript
 		$	create -nm
 
-##Docs
+## Docs
 
 ```javascript
 		-nm   --------- create the project dirs of normal mobile
